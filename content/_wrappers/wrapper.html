@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     [! include "_wrappers/_head.html" !]
     [! include "styles/_main.html" !]
-    [! include "_includes/bitty-page-functions.html" !]
   </head>
   <body>
 
     [! include "_wrappers/_noscript.html" !]
 
-    <bitty-3-0 data-connect="/scripts/bitty-page.js" 
+    <bitty-4-0 data-connect="/scripts/bitty-page.js" 
       data-send="clear"
+      data-listeners="keyup input click"
       class="load-hider content-wrapper">
 
       [! include "_wrappers/_header.html" !]
@@ -21,8 +21,8 @@
 
       [! include "_wrappers/_footer.html" !]
 
-    </bitty-3-0>
+    </bitty-4-0>
 
-    <script src="/components/bitty-3.0.0.min.js" type="module"></script>
+    <script src="/components/bitty-4.0.0-rc1.full.js" type="module"></script>
   </body>
 </html>

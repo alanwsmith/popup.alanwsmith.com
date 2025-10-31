@@ -1,3 +1,7 @@
+function setProp(key, value) {
+  document.documentElement.style.setProperty(key, value);
+}
+
 export default class {
   #url = null;
   #params = {
@@ -8,7 +12,7 @@ export default class {
   }
 
   bittyInit() {
-    this.api.fn.setProp("--load-hider", "1");
+    setProp("--load-hider", "1");
   }
 
   clear(_event, el) {
@@ -17,6 +21,9 @@ export default class {
 
   updateUrl(event, _el) {
     this.#url = event.target.value;
+    if (event.keyCode === 13) {
+      this.api.forward(null, "launch");
+    }
   }
 
   updateNum(event, _el) {
