@@ -2,12 +2,26 @@
 [!- block main -!]
 
 <hgroup>
-  <h1>A New Site</h1>
+  <h1>popup launcher</h1>
   <div class="page-subtitle">
-    With a subtitle
+    add a url, launch a page
   </div>
 </hgroup>
 
-<p>Hello, world</p>
+<label>url:<br />
+  <input type="text" data-send="updateUrl" data-receive="clear" />
+</label>
+<label>width:<br />
+  <input type="number" data-key="width" data-send="updateNum" placeholder="optional" data-receive="clear"/>
+</label>
+<label>height:<br />
+  <input type="number" data-key="height" data-send="updateNum" placeholder="optional" data-receive="clear" />
+</label>
+
+<div>
+<button data-send="launch">Launch</button>
+</div>
+
+<hr />
 
 [!- endblock -!]
