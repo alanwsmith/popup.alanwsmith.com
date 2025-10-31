@@ -21,3 +21,7 @@ hgroup {
   color: var(--default-faded);
   border-bottom: var(--accent-border);
 }
+
+label {
+  display: block;
+}
