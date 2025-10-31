@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
 <meta charset="UTF-8" />
@@ -1953,45 +1953,7 @@ hgroup {
 label {
   display: block;
 }
-</style><script>
-  setTimeout(() => { 
-    document.documentElement.style.setProperty("--load-hider", "1");
-  }, 1100);
-
-  window.bittyFunctions = {
-    randomFloat: function (min, max) {
-      return (Math.random() * (max - min)) + min;
-    },
-    randomInt: function (min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    },
-    sleep: function (ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    },
-    setProp: function (key, value) {
-      document.documentElement.style.setProperty(key, value);
-    },
-    setPx: function (key, value) {
-      document.documentElement.style.setProperty(key, `${value}px`);
-    },
-    shuffleArray: function (array) {
-      let currentIndex = array.length;
-      let randomIndex;
-      while (currentIndex != 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-        [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex],
-          array[currentIndex],
-        ];
-      }
-    },
-    url: function () {
-      return new URL(window.location.href);
-    }
-  };
-
-</script>  </head>
+</style>  </head>
   <body>
 
 <noscript>
@@ -2001,8 +1963,9 @@ label {
   </p>
   <style>:root { --load-hider: 1; }</style>
 </noscript>
-    <bitty-3-0 data-connect="/scripts/bitty-page.js" 
+    <bitty-4-0 data-connect="/scripts/bitty-page.js" 
       data-send="clear"
+      data-listeners="keyup input click"
       class="load-hider content-wrapper">
 
 <header class="default-wrapper xlarge-bottom-margin">
@@ -2046,8 +2009,8 @@ label {
     <a href="https://www.alanwsmith.com/feeds/posts.xml">rss</a>
   </div>
 </footer>
-    </bitty-3-0>
+    </bitty-4-0>
 
-    <script src="/components/bitty-3.0.0.min.js" type="module"></script>
+    <script src="/components/bitty-4.0.0-rc1.full.js" type="module"></script>
   </body>
 </html>
