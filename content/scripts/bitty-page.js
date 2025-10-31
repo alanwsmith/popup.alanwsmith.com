@@ -33,7 +33,8 @@ export default class {
 
   launch(_event, _el) {
     const params = `popup,noopener,noreferrer${this.params()}`;
-    window.open(this.#url, "popup_window", params);
+    const url = this.#url.startsWith("http") ? this.#url : `https://${this.#url}`;
+    window.open(url, "popup_window", params);
   }
 
   params() {
