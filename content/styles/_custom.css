@@ -25,3 +25,7 @@ hgroup {
 label {
   display: block;
 }
+
+p {
+  max-width: 26rem;
+}
